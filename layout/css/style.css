@@ -246,13 +246,95 @@ body{
 	/*text-transform:uppercase;*/
 }
 
-/*starting post addpage style ////////////////////////////////////////////////////////*/
+/*starting post add page style ////////////////////////////////////////////////////////*/
 
 .post-add-page{
 	text-align:center;
 	text-transform:capitalize;
+	padding:10PX;
 }
 
+.post-add-page form{
+	margin-top:3%;
+	/*border:solid 1px;*/
+	/*font-weight:bold;*/
+}
+
+.post-add-page input[name="title"]{
+	width:250PX;
+	height:40PX;
+/*	border-radius:10PX;
+	border:2px solid #1ceacf;
+	margin-bottom:3PX;*/
+}
+
+.post-add-page input[name="title"], .post-add-page textarea
+{
+	border-radius:10PX;
+	border:2px solid #1ceacf;
+	margin-bottom:10PX;
+}
+
+.post-add-page textarea{
+	margin:10PX 0 10PX 30PX;
+}
+
+.post-add-page form button{
+	background-color:#1ceacf;
+	color:black;
+	padding:8PX;
+	border-radius:10PX;
+	margin:3%;
+	/*border:2px solid black;*/
+	text-transform:capitalize;
+	font-weight:bold;
+}
+
+/*ending add post page style ////////////////////////////////////////////////////////////*/
+
+/*starting edit post page style //////////////////////////////////////////////////////////*/
+
+.post-edit-page{
+
+	text-align:center;
+	text-transform:capitalize;
+	padding:10PX;
+}
+
+.post-edit-page h1{
+	margin-bottom:10PX;
+}
+
+.post-edit-page form label{
+	font-weight:700;
+}
+.post-edit-page input[name="title"]{
+	width:250PX;
+	height:30PX;
+}
+
+.post-edit-page input[name="title"], .post-edit-page textarea
+{
+	border-radius:10PX;
+	border:2px solid #1ceacf;
+	margin-bottom:10PX;
+	padding:10PX;
+}
+
+.post-edit-page textarea{
+	margin:10PX 0 10PX 30PX;
+}
+
+.post-edit-page form button{
+	background-color:#1ceacf;
+	color:black;
+	padding:8PX;
+	border-radius:10PX;
+	margin:3%;
+	/*border:2px solid black;*/
+	text-transform:capitalize;
+	font-weight:bold;
+}
 /*ending post page style ////////////////////////////////////////////////////////////*/
 
 /*starting homepage style ////////////////////////////////////////////////////////////*/

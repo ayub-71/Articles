@@ -70,15 +70,17 @@ if(SITE_STATUS == true){
 						<label>title</label>
 						<input type="text" name="title">
 					</div>
+					<label>article</label>
 					<div>
-						<label>text</label>
-						<input type="text" name="text">
+						<!-- <label>article</label> -->
+						<textarea rows="20" cols="70"></textarea>
+
 					</div>
 					<div>
 						<label>article image</label>
 						<input type="file">
 					</div>
-					<button>add article</button>
+					<button>create article</button>
 				</form>
 			</div>
 
@@ -124,27 +126,31 @@ if(SITE_STATUS == true){
 			$data = $stmt->fetch();
 			$count = $stmt->rowCount();
 		?>
+		<div class="post-edit-page">
 
-		<h1>update article</h1>
+			<h1>update article</h1>
 
-			<form action="?d=update" method="POST">
-				<div>
-					<label>title</label>
-					<input type="text" name="title" value="<?php echo $data['title']; ?>">
-				</div>
+				<form action="?d=update" method="POST">
+					<div>
+						<label>title</label>
+						<input type="text" name="title" value="<?php echo $data['title']; ?>">
+					</div>
 
-				<div>
-					<label>text</label>
-					<input type="text" name="text" value="<?php echo $data["text"]; ?>">
-				</div>
+					<label>article</label>
+					<div>
+						<!-- <label>text</label> -->
+						<!-- <input type="text" name="text" value="<?php //echo $data["text"]; ?>"> -->
+						<textarea rows="20" cols="70" ><?php echo $data["text"]; ?></textarea>
+					</div>
 
-				<div>
-					<label>article image</label>
-					<input type="file">
-				</div>
-				<input type="hidden" name="postid" value="<?php echo $data["postid"]; ?>">
-				<button>update</button>
-			</form>
+					<div>
+						<label>article image</label>
+						<input type="file">
+					</div>
+					<input type="hidden" name="postid" value="<?php echo $data["postid"]; ?>">
+					<button>update</button>
+				</form>
+		</div>
 
 		<?php }
 		elseif($d == "update"){
