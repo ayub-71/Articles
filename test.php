@@ -1,8 +1,28 @@
 <?php 
-
-include "config.php";
-$query = $con->prepare("SELECT username from users order by userid desc limit 5");
-		$query->execute();
-		$results = $query->fetchAll();
-
-		foreach($results as $result){echo $result["username"] . "<br>";}
+?>
+<table>
+	<tr>
+		<th>name1</th>
+		<th>name2</th>
+		<th>name3</th>
+		<th>name4</th>
+	</tr>
+	<tr>
+		<td>name1</td>
+		<td>name2</td>
+		<td>name3</td>
+		<td>name4</td>
+	</tr>
+	<tr>
+		<td>name1</td>
+		<td>name2</td>
+		<td>name3</td>
+		<td>name4</td>
+	</tr>
+	<tr>
+		<td>name1</td>
+		<td>name2</td>
+		<td>name3</td>
+		<td>name4</td>
+	</tr>
+</table>

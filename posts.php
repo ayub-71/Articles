@@ -30,78 +30,57 @@ if(SITE_STATUS == true){
 
 				<h1>articles manage</h1>
 
-				<a href="?d=add"><button><h3>add new article</h3></button></a>
+				<button ><a href="?d=add"><h3>add new article</h3></a></button>
 
-				<table>
-					<tr>
-						<th>#id</th>
-						<th>title</th>
-						<th>state</th>
-						<th>control</th>
-					</tr>
-					<tr>
-						<td>
-							<?php
-								foreach($results as $result){
+				<div class="table-container">
+					<table>
+						<tr class="trr">
+							<th class="id">#id</th>
+							<th class="title">title</th>
+							<th class="state">state</th>
+							<th class="control">control</th>
+						</tr>
 
-								echo $result["postid"] . "<br>";
+						<?php
 
-							}
-							?>
-						</td>
-						<td>
-							<?php
-								foreach($results as $result){
-
-								echo $result["title"] . "<br>";
-
-							}
-							?>
-						</td>
-						<td>
-							<?php
-								foreach($results as $result){
-
-								echo "state" . "<br>";
-
-							}
-							?>
-						</td>
-						<td>
-							<?php
-								foreach($results as $result){
-
-								echo "<a href='?d=edit&postid=" . $result["postid"] . "'>edit</a> / <a href='?d=delete&postid=" . $result["postid"] . "'>delete</a>"
-								 . "<br>";
-
-							}
-							?>
-						</td>
-						
-					</tr>
-				</table>
+							foreach($results as $result){?>
+								<tr>
+									<td><?php echo $result["postid"]; ?></td>
+									<td><?php echo $result["title"]; ?></td>
+									<td>state</td>
+									<td class="button">
+										<a class="edit" href='?d=edit&postid=<?php echo $result["postid"]; ?>'>edit</a>
+										<a class="delete" href='?d=delete&postid=<?php echo $result["postid"]; ?>'>delete</a>
+									</td>
+								</tr>
+							<?php } ?>
+					</table>
+				</div>
 			</div>
 
 		<?php }
 		elseif($d == "add"){?>
 
-			<h1>add articles</h1>
+			<div class="post-add-page">
 
-			<form action="?d=insert" method="POST">
-				<div>
-					<label>title</label>
-					<input type="text" name="title">
-				</div>
-				<div>
-					<label>text</label>
-					<input type="text" name="text">
-				</div>
-				<div>
-					<label>article image</label>
-					<input type="file">
-				</div>
-				<button>add article</button>
-			</form>
+				<h1>add articles</h1>
+
+				<form action="?d=insert" method="POST">
+					<div>
+						<label>title</label>
+						<input type="text" name="title">
+					</div>
+					<div>
+						<label>text</label>
+						<input type="text" name="text">
+					</div>
+					<div>
+						<label>article image</label>
+						<input type="file">
+					</div>
+					<button>add article</button>
+				</form>
+			</div>
 
 		<?php }
 		elseif($d == "insert"){
