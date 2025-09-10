@@ -279,15 +279,44 @@ body{
 	margin:10PX 0 10PX 30PX;
 }
 
+.post-add-page form .div-button{
+	position:relative;
+	/*border:solid 1px;*/
+}
 .post-add-page form button{
 	background-color:#1ceacf;
 	color:black;
 	padding:8PX;
 	border-radius:10PX;
-	margin:3%;
+	/*margin:1% 0% 0 -7%;*/
 	/*border:2px solid black;*/
 	text-transform:capitalize;
 	font-weight:bold;
+	position:absolute;
+	left:35%;
+	top:10px;
+}
+
+.post-add-page button:hover{
+	cursor:pointer;
+}
+
+.post-add-page .div-button-cancel{
+
+	position:relative;
+}
+
+.post-add-page .cancel{
+
+	background-color:#77f2e2;
+	color:black;
+	padding:8PX;
+	border-radius:10PX;	
+	text-transform:capitalize;
+	font-weight:bold;
+	position:absolute;
+	right:35%;
+	top:10PX;
 }
 
 /*ending add post page style ////////////////////////////////////////////////////////////*/

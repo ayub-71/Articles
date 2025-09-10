@@ -80,8 +80,12 @@ if(SITE_STATUS == true){
 						<label>article image</label>
 						<input type="file">
 					</div>
-					<button>create article</button>
+					<div class="div-button"><button>create article</button></div>
 				</form>
+
+				<div class="div-button-cancel">
+					<a href="posts.php"><button class="cancel">cancel</button></a>
+				</div>
 			</div>
 
 		<?php }
@@ -140,7 +144,7 @@ if(SITE_STATUS == true){
 					<div>
 						<!-- <label>text</label> -->
 						<!-- <input type="text" name="text" value="<?php //echo $data["text"]; ?>"> -->
-						<textarea rows="20" cols="70" ><?php echo $data["text"]; ?></textarea>
+						<textarea rows="20" cols="70" name="text" ><?php echo $data["text"]; ?></textarea>
 					</div>
 
 					<div>
@@ -167,6 +171,7 @@ if(SITE_STATUS == true){
 				 echo "article have updated successfuly";
 
 				 header("refresh:3 url=posts.php"); exit();
+				 // header("refresh:3 url=" . $_SERVER['HTTP_REFERER'] . "");
 			}
 		}
 		elseif($d == "delete"){
