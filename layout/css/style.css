@@ -141,12 +141,14 @@ body{
 	/*border:none;*/
 	padding:5px;
 	border-radius:5PX;
+	cursor:pointer;
 }
 
-.posts_managePage button a{
+/*.posts_managePage button a{
 	color:#fff;
 	text-decoration:none;
-}
+	cursor:pointer;
+}*/
 
 /*
 .posts_managePage .table-container{
@@ -246,7 +248,9 @@ body{
 	/*text-transform:uppercase;*/
 }
 
-/*starting post add page style ////////////////////////////////////////////////////////*/
+/*ending post page style ////////////////////////////////////////////////////////*/
+
+/*starting post add page style ///////////////////////////////////////////////////*/
 
 .post-add-page{
 	text-align:center;
@@ -273,6 +277,8 @@ body{
 	border-radius:10PX;
 	border:2px solid #1ceacf;
 	margin-bottom:10PX;
+	/*text-indent:10PX;*/
+	padding:10px;
 }
 
 .post-add-page textarea{
@@ -354,15 +360,37 @@ body{
 	margin:10PX 0 10PX 30PX;
 }
 
-.post-edit-page form button{
+.post-edit-page form .update-button{
+
+	position:relative;
+}
+.post-edit-page form button,
+.post-edit-page .cancel-button button
+{
 	background-color:#1ceacf;
 	color:black;
 	padding:8PX;
 	border-radius:10PX;
-	margin:3%;
-	/*border:2px solid black;*/
 	text-transform:capitalize;
 	font-weight:bold;
+	position:absolute;
+	top:20px;
+	cursor:pointer;
+}
+
+.post-edit-page form button{
+
+	left:35%;
+}
+
+.post-edit-page .cancel-button{
+
+	position:relative;
+}
+
+.post-edit-page .cancel-button button{
+
+	right:35%;
 }
 /*ending post page style ////////////////////////////////////////////////////////////*/
 

@@ -30,7 +30,7 @@ if(SITE_STATUS == true){
 
 				<h1>articles manage</h1>
 
-				<button ><a href="?d=add"><h3>add new article</h3></a></button>
+				<a href="?d=add"><button><h3>add new article</h3></button></a>
 
 				<div class="table-container">
 					<table>
@@ -152,8 +152,12 @@ if(SITE_STATUS == true){
 						<input type="file">
 					</div>
 					<input type="hidden" name="postid" value="<?php echo $data["postid"]; ?>">
-					<button>update</button>
+					<div class="update-button"><button>update</button></div>
 				</form>
+
+				<div class="cancel-button">
+					<a href="posts.php"><button>cancel</button><a>
+				</div>
 		</div>
 
 		<?php }
@@ -171,7 +175,8 @@ if(SITE_STATUS == true){
 				 echo "article have updated successfuly";
 
 				 header("refresh:3 url=posts.php"); exit();
-				 // header("refresh:3 url=" . $_SERVER['HTTP_REFERER'] . "");
+				 // $url = $_SERVER['HTTP_REFERER'];
+				 // header("refresh:3 url=$url");
 			}
 		}
 		elseif($d == "delete"){
